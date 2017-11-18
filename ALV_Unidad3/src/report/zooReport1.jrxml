@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="zooReport1" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8ddf7517-f91d-44ba-912f-199a492e54c0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql"/>
+	<parameter name="image_mia1" class="java.lang.String"/>
+	<parameter name="image_zoo" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT zoos.id_zoom,
+	zoos.name,
+	zoos.number_animals,
+	zoos.city
+FROM zoos]]>
+	</queryString>
+	<field name="id_zoom" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_zoom"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+	</field>
+	<field name="number_animals" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="number_animals"/>
+	</field>
+	<field name="city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="city"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<image>
+				<reportElement x="520" y="8" width="50" height="50" uuid="2fb880f3-9cfe-4912-8d2a-40c44d0364be"/>
+				<imageExpression><![CDATA[$P{image_mia1}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="50" height="50" uuid="47463bab-1af6-42bb-9cec-6c65aca856fb"/>
+				<imageExpression><![CDATA[$P{image_zoo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="71" y="0" width="430" height="50" backcolor="#BC80C2" uuid="46f63fd1-cc36-4196-b213-d283fe027d8b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Harlow Solid Italic" size="37"/>
+				</textElement>
+				<text><![CDATA[Zoo Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="143" height="36" backcolor="#E84FD6" uuid="273a6fdb-7ca1-4fef-8c01-49d4bd86f4b6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0961d2a9-1b53-4dc4-b3e2-823aa76fd8cb"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[id_zoom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="143" y="0" width="143" height="36" backcolor="#E84FD6" uuid="bf0c149c-5fe1-4205-8231-24a7bff1d698">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="743a8359-56ac-4533-aa2d-e30d20fbb287"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="286" y="0" width="143" height="36" backcolor="#E84FD6" uuid="6ec9a9d6-3164-4641-8c49-91dfbe46eb97">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e30b5a00-1bd5-4025-a73a-d7ef23def2b2"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[number_animals]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="429" y="0" width="143" height="36" backcolor="#E84FD6" uuid="9ca4d085-2a5a-47c1-8540-50460fb0d029">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf39129c-64aa-441c-b55d-105df81125b7"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[city]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="143" height="19" backcolor="#F9CCFC" uuid="f4f5d2ec-e545-4c90-bf42-fe74c580f670">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0961d2a9-1b53-4dc4-b3e2-823aa76fd8cb"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_zoom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="143" y="0" width="143" height="19" backcolor="#F9CCFC" uuid="cb482ee9-51a2-45e8-81b5-f5e076e6c67d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="743a8359-56ac-4533-aa2d-e30d20fbb287"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="286" y="0" width="143" height="19" backcolor="#F9CCFC" uuid="f86318db-65a5-4a2c-b01c-b9b2aaa769d7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e30b5a00-1bd5-4025-a73a-d7ef23def2b2"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{number_animals}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="429" y="0" width="143" height="19" backcolor="#F9CCFC" uuid="45380ed8-c653-4818-b53d-e9b9002db50e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf39129c-64aa-441c-b55d-105df81125b7"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>
