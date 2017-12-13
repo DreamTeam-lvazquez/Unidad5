@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>utng.configuracion.strings</base-name>
+            <var>str</var>
+        </resource-bundle>           
+    </application>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>Inicio</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Clients</from-outcome>
+            <to-view-id>/clients/list-clients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Roles</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Modules</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Insurances</from-outcome>
+            <to-view-id>/insurances/list-insurances.xhtml</to-view-id>
+        </navigation-case>       
+        <navigation-case>
+            <from-outcome>Sicks</from-outcome>
+            <to-view-id>/sicks/list-sicks.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Ingredients</from-outcome>
+            <to-view-id>/ingredients/list-ingredients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>/Drinks</from-outcome>
+            <to-view-id>/drinks/list-drinks.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Saucers</from-outcome>
+            <to-view-id>/saucers/list-saucers.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+        <from-view-id>/clients/form-clients.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/clients/list-clients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/clients/list-clients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/clients/list-clients.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/clients/list-clients.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/clients/form-clients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/clients/form-clients.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+        
+        
+        
+    <navigation-rule>
+        <from-view-id>/roles/form-roles.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/roles/list-roles.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/roles/form-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/roles/form-roles.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+        
+        
+        
+    <navigation-rule>
+        <from-view-id>/modules/form-modules.xhtml</from-view-id>
+             
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+            
+            
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/modules/list-modules.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/modules/form-modules.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/modules/form-modules.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+        
+        
+    <navigation-rule>
+        <from-view-id>/insurances/form-insurances.xhtml</from-view-id>
+             
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/insurances/list-insurances.xhtml</to-view-id>
+        </navigation-case>
+            
+            
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/insurances/list-insurances.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/insurances/list-insurances.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/insurances/list-insurances.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/insurances/form-insurances.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/insurances/form-insurances.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+                
+                
+                
+    <navigation-rule>
+        <from-view-id>/sicks/form-sicks.xhtml</from-view-id>
+             
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/sicks/list-sicks.xhtml</to-view-id>
+        </navigation-case>
+            
+            
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/sicks/list-sicks.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/sicks/list-sicks.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/sicks/list-sicks.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/sicks/form-sicks.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/sicks/form-sicks.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+        
+        
+        
+        
+        
+        
+                
+                
+    <navigation-rule>
+        <from-view-id>/ingredients/form-ingredients.xhtml</from-view-id>
+             
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/ingredients/list-ingredients.xhtml</to-view-id>
+        </navigation-case>
+            
+            
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/ingredients/list-ingredients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/ingredients/list-ingredients.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/ingredients/list-ingredients.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/ingredients/form-ingredients.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/ingredients/form-ingredients.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>     
+        
+        
+        
+        
+    <navigation-rule>
+        <from-view-id>/drinks/form-drinks.xhtml</from-view-id>
+             
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/drinks/list-drinks.xhtml</to-view-id>
+        </navigation-case>
+            
+            
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/drinks/list-drinks.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/drinks/list-drinks.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/drinks/list-drinks.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/drinks/form-drinks.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/drinks/form-drinks.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>   
+        
+        
+    <navigation-rule>
+        <from-view-id>/saucers/form-saucers.xhtml</from-view-id>
+             
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/saucers/list-saucers.xhtml</to-view-id>
+        </navigation-case>
+            
+            
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/saucers/list-saucers.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/saucers/list-saucers.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    <navigation-rule>
+        <from-view-id>/saucers/list-saucers.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/saucers/form-saucers.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/saucers/form-saucers.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+        
+    
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Correcto</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Incorrecto</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+</faces-config>
