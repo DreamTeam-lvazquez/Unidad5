@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;configuracion&apos; to &apos;datos&apos;" description="Move &apos;configuracion&apos; to &apos;datos&apos;" destination="Tacho/src/java/utng/datos" element1="Tacho/src/java/utng/configuracion" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1513036881604" updateReferences="true"/>
+</session>

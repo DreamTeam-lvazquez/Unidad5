@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <h:head>
+            <title>#{str.saucerFormTittle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h2>#{str.saucerFormTittle}</h2>
+                    <p:fieldset legend="#{str.saucerLegendForm}">
+                         <h:form>
+                             <h:panelGrid columns="1">
+                                 <p:inputText placeholder="#{str.saucerNamePrompt}" value="#{saucerBean.saucer.name}"></p:inputText>
+                                 <p:inputText placeholder="#{str.saucerPricePrompt}" value="#{saucerBean.saucer.price}"></p:inputText>
+                                 <p:inputText placeholder="#{str.saucerChefHeader}" value="#{saucerBean.saucer.chef}"></p:inputText>
+                                 <p:selectOneMenu value="#{saucerBean.saucer.ingredient.idIngredient}">
+                                     <f:selectItems value="#{saucerBean.ingredients}" var="p" itemLabel="#{p.name}" itemValue="#{p.idIngredient}"></f:selectItems>                                     
+                                 </p:selectOneMenu>  
+                                     <p:selectOneMenu value="#{saucerBean.saucer.drink.idDrink}">
+                                     <f:selectItems value="#{saucerBean.drinks}" var="b" itemLabel="#{b.name}" itemValue="#{b.idDrink}"></f:selectItems>                                     
+                                 </p:selectOneMenu>                                 
+                             </h:panelGrid>
+                             <p:commandButton value="#{str.buttonSave}" class="btn btn-success"  action="#{saucerBean.guardar()}" />
+                             <p:commandButton value="#{str.buttonDelete}" class="btn btn-danger" action="#{saucerBean.eliminar()}" />
+                             <p:commandButton value="#{str.buttonCancel}" class="btn btn-warning" action="#{saucerBean.cancelar()}" />
+                          </h:form>
+                    </p:fieldset>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>

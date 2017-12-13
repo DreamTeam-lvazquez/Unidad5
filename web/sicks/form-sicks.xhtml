@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+   
+
+        <h:head>
+             <title>#{str.sickFormTitle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h2>#{str.sickFormHeader}</h2>
+                    <p:fieldset legend="#{str.sickLegendForm}">
+                         <h:form>
+                             <h:panelGrid columns="1">
+                                 <p:inputText placeholder="#{str.sickNamePrompt}" value="#{sickBean.sick.nameSick}"></p:inputText>
+                                 <p:inputText placeholder="#{str.passwordPrompt}" value="#{sickBean.sick.password}" type="password"></p:inputText>
+                                 <p:selectOneMenu value="#{sickBean.sick.insurance.idInsurance}">
+                                     <f:selectItems value="#{sickBean.insurances}" var="s" itemLabel="#{s.name}" itemValue="#{s.idInsurance}"></f:selectItems>                                     
+                                 </p:selectOneMenu>                                 
+                             </h:panelGrid>
+                             <p:commandButton value="#{str.buttonSave}" class="btn btn-success"  action="#{sickBean.guardar()}" />
+                             <p:commandButton value="#{str.buttonDelete}" class="btn btn-danger" action="#{sickBean.eliminar()}" />
+                             <p:commandButton value="#{str.buttonCancel}" class="btn btn-warning" action="#{sickBean.cancelar()}" />
+                          </h:form>
+                    </p:fieldset>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>
+

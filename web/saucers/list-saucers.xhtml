@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <h:head>
+            <title>#{str.saucerListTitle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h1>#{str.saucerListTitle}</h1>
+                    <h:form>
+                        <p:commandButton value="#{str.buttonAdd}" action="#{saucerBean.iniciar()}"></p:commandButton>
+                    </h:form>
+                    <p:dataTable value="#{saucerBean.saucers}" var="s">
+                        <p:column headerText="#{str.action}">
+                            <h:form>
+                                <p:commandButton value="#{str.buttonEdit}" action="#{saucerBean.editar(s)}"></p:commandButton>
+                            </h:form>
+                        </p:column>
+                        <p:column headerText="#{str.saucerNameHeader}">
+                            <p:outputLabel value="#{s.name}"></p:outputLabel>
+                        </p:column>
+                        <p:column headerText="#{str.saucerPriceHeader}">
+                            <p:outputLabel value="#{s.price}"></p:outputLabel>
+                        </p:column>
+                        <p:column headerText="#{str.saucerChefHeader}">
+                            <p:outputLabel value="#{s.chef}"></p:outputLabel>
+                        </p:column>
+                        <p:column headerText="#{str.saucertableNameHeader}">
+                            <p:outputLabel value="#{s.ingredient.name}"></p:outputLabel>
+                        </p:column>
+                         <p:column headerText="#{str.saucertableNameHeader}">
+                            <p:outputLabel value="#{s.drink.name}"></p:outputLabel>
+                        </p:column>
+                    </p:dataTable>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>

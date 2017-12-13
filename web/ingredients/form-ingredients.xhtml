@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.ingredientFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.ingredientFormHeader}</h2>
+                <p:fieldset legend="#{str.ingredientLegendForm}">
+                <h:form>
+                    <p:inputText placeholder="#{str.ingredientNamePrompt}" value="#{ingredientBean.ingredient.name}"></p:inputText>
+                    <p:inputText placeholder="#{str.ingredientFlavorPrompt}" value="#{ingredientBean.ingredient.flavor}"></p:inputText>
+                    <p:inputText placeholder="#{str.ingredientPricePrompt}" value="#{ingredientBean.ingredient.price}"></p:inputText>
+                    <p:commandButton value="#{str.buttonSave}" class="btn btn-success"  action="#{ingredientBean.guardar()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonDelete}" class="btn btn-danger" action="#{ingredientBean.eliminar()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonCancel}" class="btn btn-warning" action="#{ingredientBean.cancelar()}"></p:commandButton>
+                </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

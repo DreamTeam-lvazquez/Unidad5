@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\vazquez\Music\Tacho\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3463513373.index
+725555719.index
+3609595247.index
+1272507924.index
+3622674970.index
+912023277.index
+3364592261.index
